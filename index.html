@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Website with Frames</title>
+    <style>
+        body {
+    	    font-family: normal;
+	    margin: 0;
+    	    padding: 0;
+   	    background-color: #CB5F5F;
+            color: #FFFFFF;
+  	}
+  	header {
+    	    background-color: #CB5F5F;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+  	}
+  	nav {
+    	    background-color: #958181;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+  	}
+  	nav a, nav span {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px 15px;
+  	}
+  	.dropdown {
+            position: relative;
+            display: inline-block;
+  	}
+       .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #FFFFFF;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+  	}
+  	.dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+  	}
+  	.dropdown-content a:hover {
+    	    background-color: #575757;
+  	}
+  	.dropdown:hover .dropdown-content {
+            display: block;
+  	}
+        frameContainer {
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+  	}
+  	iframe {
+            width: 100%;
+            height: 900px;
+            border: none;
+  	}
+  	footer {
+            text-align: center;
+            padding: 9px;
+            background-color: #958181;
+            color: white;
+        }
+   </style>
+</head>
+<body>
+
+<header>
+  <h1><b>WELCOME TO MY PERSONAL WEBSITE</b></h1>
+</header>
+
+<body style="background-color:#CB5F5F;">
+<center><bold><b style="font-size:30px;color: #FFFFFF;font-family:broadway;">ABOUT ME° ༘🎧⋆🖇₊˚ෆ</bold></b><center>
+
+  <section>
+    <p>Hey there! I'm Chempaka and this is my corner of the internet. I'm a 20 year old student who loves reading. 
+    <br>On this website, you'll find a glimpse into my life, adventures, and the things that make me tick.</br>
+    Join me as I share my stories and experiences!!</p></br>
+  </section>
+</div>
+
+<nav>
+  <div class="dropdown">
+    <span>My Background</span>
+    <div class="dropdown-content">
+      <a href="background.html" target="contentFrame">About Me</a>
+      <a href="education.html" target="contentFrame">Education</a>
+      <a href="hobbies.html" target="contentFrame">Hobbies</a>
+    </div>
+  </div>
+  <a href="family.html" target="contentFrame">Family Members</a>
+  <div class="dropdown">
+    <span>Favourite Places</span>
+    <div class="dropdown-content">
+      <a href="place1.html" target="contentFrame">Penang Island</a>
+      <a href="place2.html" target="contentFrame">Tioman Island</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <span>Photos That I Captured</span>
+    <div class="dropdown-content">
+      <a href="foods.html" target="contentFrame">Foods</a>
+      <a href="views.html" target="contentFrame">Digital diary</a>
+    </div>
+  </div>
+</nav>
+
+<div id="frameContainer" class="content">
+  <iframe name="contentFrame" src="background.html" onload="scrollToTop()"></iframe>
+</div>
+
+<footer>
+    <p>&copy; 2024 Chempaka Website. All rights reserved.</p>
+</footer>
+
+<script>
+  function scrollToTop() {
+    const iframe = document.querySelector('iframe[name="contentFrame"]');
+    iframe.contentWindow.scrollTo(0, 0);
+  }
+</script>
+</body>
+</html>
